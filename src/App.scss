@@ -1,0 +1,83 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+button {
+  border-radius: 60px;
+  margin: 5px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+}
+
+.container,
+.wrapper {
+  display: grid;
+}
+
+.container {
+  grid-template-areas:
+    'value value value value'
+    'modif modif modif oper'
+    'number number number oper'
+    'number number number oper'
+    'number number number oper'
+    'number number number oper';
+  grid-auto-columns: 1fr;
+  max-width: 500px;
+  min-height: 70vh;
+  max-height: 70vh;
+  margin: 0 auto;
+  background-color: #313131;
+  padding: 12px;
+  border-radius: 25px;
+}
+
+.value {
+  border-radius: 30px;
+  margin-bottom: 10px;
+  grid-area: value;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 48px;
+  font-weight: 500;
+  min-height: 5rem;
+  padding: 0 15px;
+  color: white;
+  background-color: #202020;
+}
+
+.modificators {
+  grid-area: modif;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  button {
+    background-color: #cecece;
+    color: black;
+  }
+}
+.operations {
+  grid-area: oper;
+  button {
+    background-color: #ffae00;
+  }
+}
+.numbers {
+  grid-area: number;
+  display: flex;
+  flex-wrap: wrap;
+
+  button {
+    flex: 1 0 25%;
+    background-color: #555555;
+  }
+}
